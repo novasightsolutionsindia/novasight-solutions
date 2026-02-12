@@ -1,0 +1,95 @@
+{
+    "business": {
+        "name": "NovaSight Solutions",
+        "owner": "Sadeek Khan",
+        "address": "Karani Mandir Lane, Ward No. 60, Sureshiya, Hanumangarh Junction, Rajasthan -335512",
+        "mobile": "+91 77105 25823",
+        "email": "novasightsolutionsindia@gmail.com",
+        "latitude": "29.6345765",
+        "longitude": "74.2944615",
+        "established": "2014"
+    },
+    "stats": {
+        "rating": "4.9",
+        "reviews": "350",
+        "cameras": "1500",
+        "clients": "220",
+        "happy_households": "520",
+        "business_clients": "180"
+    },
+    "services": [
+        {
+            "id": 1,
+            "icon": "fa-camera-retro",
+            "title": "CCTV Systems",
+            "description": "HD, IP, PTZ, and thermal cameras. Tailored for home & business. Night vision & remote access."
+        },
+        {
+            "id": 2,
+            "icon": "fa-bell",
+            "title": "Alarm & Sensors",
+            "description": "Intrusion detection, motion sensors, glass break alarms, monitored response."
+        },
+        {
+            "id": 3,
+            "icon": "fa-lock",
+            "title": "Access Control",
+            "description": "Biometric, RFID, smart locks & gate automation. Total entry management."
+        },
+        {
+            "id": 4,
+            "icon": "fa-wifi",
+            "title": "Smart Security",
+            "description": "Video doorbells, remote monitoring, mobile alerts & cloud storage."
+        }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Hanumangarh Junction Mall",
+            "type": "Business",
+            "rating": "5.0",
+            "review": "Complete CCTV coverage with remote monitoring - excellent service!"
+        },
+        {
+            "id": 2,
+            "name": "Sureshiya Hospital",
+            "type": "Healthcare",
+            "rating": "4.9",
+            "review": "Access control and 24/7 surveillance system installed professionally."
+        },
+        {
+            "id": 3,
+            "name": "Karani Mandir Trust",
+            "type": "Trust",
+            "rating": "5.0",
+            "review": "Very responsive team. High quality cameras."
+        },
+        {
+            "id": 4,
+            "name": "Ward No.60 Co-op",
+            "type": "Cooperative",
+            "rating": "4.8",
+            "review": "Cost effective and durable security setup."
+        },
+        {
+            "id": 5,
+            "name": "Nova Jewellers",
+            "type": "Retail",
+            "rating": "5.0",
+            "review": "Motion sensors and alarms working perfectly."
+        },
+        {
+            "id": 6,
+            "name": "R.S. Gas & Agro",
+            "type": "Agriculture",
+            "rating": "4.9",
+            "review": "Smart security with mobile alerts. Highly recommend."
+        }
+    ],
+    "testimonial": "Fast installation, crystal clear footage, and polite staff – Sadeek bhai is very professional.",
+    "about": {
+        "description1": "Founded by Sadeek Khan, we've been securing Hanumangarh since 2014.",
+        "description2": "NovaSight Solutions delivers high-end security integration – from single CCTV setup to complete building automation. We believe in proactive service and transparent pricing. Every installation comes with warranty and lifetime support guidance."
+    }
+}
