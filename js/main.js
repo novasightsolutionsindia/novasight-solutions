@@ -62,7 +62,7 @@ let businessData = {
     ],
     testimonial: "Fast installation, crystal clear footage, and polite staff – Sadeek bhai is very professional.",
     about: {
-        description1: "Founded by Sadeek Khan, we've been securing Hanumangarh since 2014.",
+        description1: "Founded by Sadeek Khan, we've been securing Hanumangarh since 2024.",
         description2: "NovaSight Solutions delivers high-end security integration – from single CCTV setup to complete building automation. We believe in proactive service and transparent pricing. Every installation comes with warranty and lifetime support guidance."
     }
 };
@@ -458,3 +458,4 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('NovaSight Solutions website initialized successfully!');
 
 });
+
