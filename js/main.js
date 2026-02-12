@@ -16,7 +16,7 @@ let businessData = {
         email: "novasightsolutionsindia@gmail.com",
         latitude: "29.6345765",
         longitude: "74.2944615",
-        established: "2014"
+        established: "2024"
     },
     stats: {
         rating: "4.9",
@@ -456,4 +456,5 @@ document.addEventListener('DOMContentLoaded', function() {
     initActiveNav();
     
     console.log('NovaSight Solutions website initialized successfully!');
+
 });
