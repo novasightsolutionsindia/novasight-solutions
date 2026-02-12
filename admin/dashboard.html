@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - NovaSight Admin</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <span class="logo-main">NovaSight</span>
+                    <span class="logo-sub">ADMIN</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebar-toggle" aria-label="Close Sidebar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="admin-profile">
+                <div class="admin-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="admin-info">
+                    <h4 id="admin-name">Admin</h4>
+                    <p>Administrator</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html">
+                            <i class="fas fa-camera"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="customers.html">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="logout-item">
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+            <!-- TOP BAR -->
+            <div class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-sidebar-toggle" id="mobile-sidebar-toggle" aria-label="Open Menu">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <span class="welcome-text">Welcome back, <span id="welcome-name">Admin</span></span>
+                </div>
+                
+                <div class="topbar-right">
+                    <a href="../index.html" target="_blank" class="topbar-link">
+                        <i class="fas fa-external-link"></i>
+                        <span>View Website</span>
+                    </a>
+                    
+                    <div class="topbar-notification">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge" id="notification-badge">0</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CONTENT AREA -->
+            <div class="admin-content">
+                <div class="page-header">
+                    <h1 class="page-title">Dashboard</h1>
+                    <div class="page-actions">
+                        <span class="date-display" id="current-date"></span>
+                    </div>
+                </div>
+                
+                <!-- STATS CARDS -->
+                <div class="stats-grid" id="stats-cards"></div>
+                
+                <div class="dashboard-grid">
+                    <!-- RECENT BOOKINGS -->
+                    <div class="dashboard-card recent-bookings-card">
+                        <div class="card-header">
+                            <h2>
+                                <i class="fas fa-list"></i>
+                                Recent Bookings
+                            </h2>
+                            <a href="bookings.html" class="btn-sm">
+                                View All <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="data-table" id="recent-bookings-table">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Customer</th>
+                                            <th>Mobile</th>
+                                            <th>Service</th>
+                                            <th>Date</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="recent-bookings-body"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- QUICK ACTIONS -->
+                    <div class="dashboard-card quick-actions-card">
+                        <div class="card-header">
+                            <h2>
+                                <i class="fas fa-bolt"></i>
+                                Quick Actions
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <div class="quick-actions-grid">
+                                <a href="services.html" class="quick-action-item">
+                                    <div class="quick-action-icon" style="background: #e3f2fd;">
+                                        <i class="fas fa-plus-circle" style="color: #0a2647;"></i>
+                                    </div>
+                                    <span>Add Service</span>
+                                </a>
+                                
+                                <a href="customers.html" class="quick-action-item">
+                                    <div class="quick-action-icon" style="background: #e8f5e9;">
+                                        <i class="fas fa-user-plus" style="color: #2e7d32;"></i>
+                                    </div>
+                                    <span>Add Customer</span>
+                                </a>
+                                
+                                <a href="bookings.html" class="quick-action-item">
+                                    <div class="quick-action-icon" style="background: #fff3e0;">
+                                        <i class="fas fa-clock" style="color: #ef6c00;"></i>
+                                    </div>
+                                    <span>Pending Bookings</span>
+                                </a>
+                                
+                                <a href="settings.html" class="quick-action-item">
+                                    <div class="quick-action-icon" style="background: #f3e5f5;">
+                                        <i class="fas fa-paint-brush" style="color: #7b1fa2;"></i>
+                                    </div>
+                                    <span>Update Info</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../js/admin.js"></script>
+</body>
+</html>

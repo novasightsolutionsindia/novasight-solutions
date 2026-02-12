@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Customers - NovaSight Admin</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- Admin CSS -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body>
+    <div class="admin-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <span class="logo-main">NovaSight</span>
+                    <span class="logo-sub">ADMIN</span>
+                </div>
+                <button class="sidebar-toggle" id="sidebar-toggle">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="admin-profile">
+                <div class="admin-avatar">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div class="admin-info">
+                    <h4 id="admin-name">Admin</h4>
+                    <p>Administrator</p>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-dashboard"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="services.html">
+                            <i class="fas fa-camera"></i>
+                            <span>Services</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="customers.html">
+                            <i class="fas fa-users"></i>
+                            <span>Customers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bookings.html">
+                            <i class="fas fa-calendar"></i>
+                            <span>Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-gear"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                    <li class="logout-item">
+                        <a href="#" id="logout-btn">
+                            <i class="fas fa-sign-out"></i>
+                            <span>Logout</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+            <!-- TOP BAR -->
+            <div class="admin-topbar">
+                <div class="topbar-left">
+                    <button class="mobile-sidebar-toggle" id="mobile-sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <span class="welcome-text">Manage Customers</span>
+                </div>
+                
+                <div class="topbar-right">
+                    <a href="../index.html" target="_blank" class="topbar-link">
+                        <i class="fas fa-external-link"></i>
+                        <span>View Website</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- CONTENT AREA -->
+            <div class="admin-content">
+                <div class="page-header">
+                    <h1 class="page-title">Customers Management</h1>
+                    <button class="btn btn-primary" id="add-customer-btn">
+                        <i class="fas fa-plus-circle"></i> Add New Customer
+                    </button>
+                </div>
+                
+                <!-- ADD/EDIT CUSTOMER FORM (Hidden by default) -->
+                <div class="form-section" id="customer-form-section" style="display: none;">
+                    <h2 id="customer-form-title">Add New Customer</h2>
+                    
+                    <form id="customer-form">
+                        <input type="hidden" id="customer-id" value="">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer-name">Customer/Organization Name <span class="required">*</span></label>
+                                <input type="text" id="customer-name" class="form-control" 
+                                       placeholder="e.g. Hanumangarh Junction Mall" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="customer-type">Customer Type</label>
+                                <select id="customer-type" class="form-control">
+                                    <option value="Business">Business</option>
+                                    <option value="Healthcare">Healthcare</option>
+                                    <option value="Trust">Trust/Organization</option>
+                                    <option value="Cooperative">Cooperative</option>
+                                    <option value="Retail">Retail</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Individual">Individual</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-review">Customer Review/Testimonial</label>
+                            <textarea id="customer-review" class="form-control" 
+                                      rows="3" placeholder="What did they say about our service?"></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customer-rating">Rating</label>
+                            <select id="customer-rating" class="form-control">
+                                <option value="5.0">5.0 ★</option>
+                                <option value="4.9">4.9 ★</option>
+                                <option value="4.8">4.8 ★</option>
+                                <option value="4.7">4.7 ★</option>
+                                <option value="4.5">4.5 ★</option>
+                                <option value="4.0">4.0 ★</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="save-customer-btn">
+                                <i class="fas fa-save"></i> Save Customer
+                            </button>
+                            <button type="button" class="btn btn-outline" id="cancel-customer-btn">
+                                <i class="fas fa-times"></i> Cancel
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- CUSTOMERS LIST -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-users"></i>
+                            All Customers
+                        </h2>
+                        <div class="card-actions">
+                            <span class="item-count" id="customers-count">0 items</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="data-table" id="customers-table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Customer Name</th>
+                                        <th>Type</th>
+                                        <th>Rating</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="customers-table-body"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="../js/admin.js"></script>
+</body>
+</html>
